@@ -6,6 +6,7 @@ const New = async () => {
   return (
   <div>
     <div> Available Categories</div>
+    <div className="grid grid-cols-3">
     {categories.categories.map(
       category =>
       <Category
@@ -18,6 +19,7 @@ const New = async () => {
         }}
       />
     )}
+    </div>
   </div>
   )
 }
