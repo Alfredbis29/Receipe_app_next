@@ -8,10 +8,11 @@ const CategoryDetails = async (props: {params: {category: string}}) => {
     const { category } = params
     const res = await  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     const data = await res.json();
-    console.log(data)
+    console.log(data) 
   return (
     <div>
         <h1>Category Details</h1>
+        <p>{category.description}</p>
         {data?.meals?.map(
             (recipe : any) => < Recipe
             key={recipe.idMeal}
